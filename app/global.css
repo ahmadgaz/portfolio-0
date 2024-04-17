@@ -24,7 +24,7 @@
   background: rgb(var(--color-primary));
 }
 
-.profile-pic {
+#profile-pic {
   clip-path: url(#profile-pic-clip-path);
 }
 

@@ -1,22 +1,17 @@
 'use client';
 
-import clsx from 'clsx';
-import { Lora } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 import { CubeTransparentIcon, SparklesIcon } from '@heroicons/react/24/solid';
 
-const lora = Lora({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['700', '400'],
-});
+import { lora } from './lora';
+import { ProfilePic } from './profile-pic';
+import { Frontend } from './skills/frontend';
+import { Responsive } from './skills/responsive';
 
 export default function Page() {
-  const [showAscii, setShowAscii] = React.useState(true);
-  const toggleAscii = () => setShowAscii(!showAscii);
   return (
     <main className="relative mx-auto flex flex-col gap-[16px] px-[24px] py-[64px] max-width">
       <section className="flex items-center gap-[48px] max-lg:flex-col-reverse">
@@ -52,73 +47,24 @@ export default function Page() {
             </strong>
           </Link>
         </div>
-        <div className="relative">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 300 300"
-            className={`${lora.className} pointer-events-none absolute -left-3 -top-3 z-10 -rotate-[70deg] text-primary`}
-            width={150}
-            height={150}
-          >
-            <path
-              id="SunCatcherStudio"
-              fill="none"
-              stroke="none"
-              d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z"
-            />
-            <text fontSize="51" fill="currentColor">
-              <textPath xlinkHref="#SunCatcherStudio" startOffset="0">
-                • • • • • • • • • • • • •
-              </textPath>
-            </text>
-          </svg>
-          <div className="relative max-h-[310px] min-h-[310px] min-w-[310px] max-w-[310px] overflow-hidden rounded-full bg-[rgb(var(--color-border)/0.25)] default-border">
-            <pre
-              className="absolute text-ascii text-[rgb(var(--color-text)/0.5)]"
-              id="profile-pic-ascii"
-            ></pre>
-            <button
-              onClick={toggleAscii}
-              className={clsx(
-                'absolute rounded-full animation hover:opacity-100 active:opacity-30',
-                {
-                  'opacity-0': showAscii,
-                },
-              )}
-            >
-              <Image
-                src="/profile-pic-base.png"
-                className="profile-pic"
-                width={310}
-                height={310}
-                alt="profile-pic"
-              />
-              <svg width="0" height="0">
-                <defs>
-                  <clipPath id="profile-pic-clip-path">
-                    <circle
-                      id="profile-pic-trailer"
-                      cx="155"
-                      cy="155"
-                      r="155"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-          </div>
-        </div>
+        <ProfilePic />
       </section>
 
       <hr className="my-[56px] border border-border" />
-      <section className="flex flex-col gap-[14px]">
-        <h1 className="text-title">Experience &amp; Projects</h1>
-        <p className="text-neutral">
-          Elegant and functional web and mobile applications, custom-designed
-          user interfaces, and visually appealing design systems tailored for
-          individual and/or business needs.
-        </p>
+      <section className="flex flex-col gap-[40px]">
+        <div className="mx-auto flex max-w-[700px] flex-col gap-[14px]">
+          <h3 className="flex items-center gap-[6px] text-subtitle text-neutral">
+            EXPERIENCE &amp; PROJECTS
+          </h3>
+          <h1 className="text-title">User-Centric Design &amp; Development.</h1>
+          <p className="text-neutral">
+            <em className={`${lora.className} italic`}>
+              Elegant web and mobile applications.
+            </em>{' '}
+            Custom-designed user interfaces and visually appealing design
+            systems tailored for individual and/or business needs.
+          </p>
+        </div>
         <div className="flex h-fit max-w-full flex-col flex-wrap items-stretch gap-[16px] pt-[16px] lg:h-[1700px]">
           <Link
             target="_blank"
@@ -244,8 +190,21 @@ export default function Page() {
         </div>
       </section>
       <hr className="my-[56px] border border-border" />
-      <section className="flex flex-col gap-[14px]">
-        <h1 className="text-center text-title">Technical Skills</h1>
+      <section className="flex flex-col gap-[40px]">
+        <div className="mx-auto flex max-w-[700px] flex-col gap-[14px]">
+          <h3 className="flex items-center gap-[6px] text-subtitle text-neutral">
+            SKILLS &amp; TOOLS
+          </h3>
+          <h1 className="text-title">Make Your Brand Shine.</h1>
+          <p className="text-neutral">
+            I help businesses and individuals stand out from the crowd with
+            custom-tailored designs and development services.
+          </p>
+        </div>
+        <div className="flex max-w-full flex-wrap items-stretch gap-[16px] pt-[16px]">
+          <Frontend />
+          <Responsive />
+        </div>
       </section>
       <hr className="my-[56px] border border-border" />
       <section className="flex flex-col gap-[14px]">

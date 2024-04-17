@@ -31,6 +31,14 @@ const config: Config = {
         '40px',
         { lineHeight: '76px', letterSpacing: '-0.05em', fontWeight: 300 },
       ],
+      superheading: [
+        '3.75rem',
+        { lineHeight: '5rem', letterSpacing: '-0.02em', fontWeight: 700 },
+      ],
+      superbody: [
+        '1.5rem',
+        { lineHeight: '2rem', letterSpacing: '-0.02em', fontWeight: 400 },
+      ],
       title: [
         '34px',
         { lineHeight: '41px', letterSpacing: '-0.02em', fontWeight: 700 },

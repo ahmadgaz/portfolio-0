@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 
-import Navbar from './navbar';
 import './global.css';
 
 export const metadata: Metadata = {
@@ -30,11 +28,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.className} text-body`}>
-        <Navbar />
-        <main className="relative pt-[75px]">{children}</main>
-        <Script src="/profile-pic-ascii.js" />
-      </body>
+      <body className={`${inter.className} text-body`}>{children}</body>
     </html>
   );
 }

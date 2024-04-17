@@ -28,6 +28,31 @@
   clip-path: url(#profile-pic-clip-path);
 }
 
+div {
+  animation: fadeIn linear;
+  animation-timeline: view();
+}
+
+#projects > * {
+  animation: fadeIn linear;
+  animation-timeline: view();
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

@@ -15,7 +15,7 @@ export const Design = () => (
       </p>
     </div>
     <div className="flex gap-[10px]">
-      <div className="flex h-full w-[200px] flex-col items-center gap-[10px] rounded-md bg-background p-[20px] default-border">
+      <div className="flex h-full w-[200px] flex-col items-center justify-center gap-[10px] rounded-md bg-background p-[20px] default-border">
         <ArrowUpTrayIcon width={28} height={28} />
         <h3 className="text-center text-[14px] text-heading leading-5">
           Upload Complete
@@ -27,7 +27,7 @@ export const Design = () => (
           Continue
         </button>
       </div>
-      <div className="flex flex-col gap-[10px]">
+      <div className="flex flex-col gap-[16px]">
         <div className="flex flex-row-reverse gap-[10px]">
           <label className="inline-flex cursor-pointer items-center">
             <input type="checkbox" value="" className="peer sr-only" />
@@ -121,20 +121,20 @@ export const Design = () => (
           </p>
         </div>
 
-        <div className="flex gap-[10px]">
+        <section className="flex gap-[10px]">
           <label className="inline-flex cursor-pointer items-center">
             <input type="checkbox" value="" className="peer sr-only" />
-            <div className="rounded-lg bg-border px-4 py-1 text-[14px] text-neutral animation hover:opacity-75 peer-checked:bg-primary peer-checked:text-background">
+            <section className="rounded-lg bg-border px-4 py-1 text-[14px] text-neutral animation hover:opacity-75 peer-checked:bg-primary peer-checked:text-background">
               Design
-            </div>
+            </section>
           </label>
           <label className="inline-flex cursor-pointer items-center">
             <input type="checkbox" value="" className="peer sr-only" />
-            <div className="rounded-lg bg-border px-4 py-1 text-[14px] text-neutral animation hover:opacity-75 peer-checked:bg-primary peer-checked:text-background">
+            <section className="rounded-lg bg-border px-4 py-1 text-[14px] text-neutral animation hover:opacity-75 peer-checked:bg-primary peer-checked:text-background">
               Code
-            </div>
+            </section>
           </label>
-        </div>
+        </section>
       </div>
     </div>
   </div>

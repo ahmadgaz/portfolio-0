@@ -5,22 +5,34 @@ import Link from 'next/link';
 import React from 'react';
 
 import {
-  MagnifyingGlassIcon,
   Bars3Icon,
+  EnvelopeIcon,
+  PhoneIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
+type NavbarProps = {
+  projectsRef: React.RefObject<HTMLHRElement>;
+  skillsRef: React.RefObject<HTMLHRElement>;
+  contactRef: React.RefObject<HTMLHRElement>;
+};
 
-const sections = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'Skills', href: '/skills' },
-  { name: 'Contact', href: '/contact' },
-];
-
-const Navbar: React.FC = () => {
+const Navbar: React.FC<NavbarProps> = ({
+  projectsRef,
+  skillsRef,
+  contactRef,
+}) => {
   const [showMenu, setShowMenu] = React.useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
   return (
-    <header className="fixed z-50 w-[100dvw] border-border bg-[rgb(var(--color-background)/0.75)] backdrop-blur-lg">
+    <header
+      className={clsx(
+        'fixed z-50 w-[100dvw] border-border backdrop-blur-lg animation',
+        {
+          'bg-[rgb(var(--color-background)/0.75)]': !showMenu,
+          'bg-background': showMenu,
+        },
+      )}
+    >
       <nav className="mx-auto box-border flex h-[73px] items-center justify-between px-[32px] animation max-width">
         {/* Logo */}
         <Link
@@ -102,10 +114,14 @@ const Navbar: React.FC = () => {
           className="animation hover:text-neutral lg:hidden"
           onClick={toggleMenu}
         >
-          {showMenu ? 'close' : 'open'}
+          {showMenu ? (
+            <XMarkIcon width={20} height={20} />
+          ) : (
+            <Bars3Icon width={20} height={20} />
+          )}
         </button>
 
-        <div
+        <section
           className={clsx(
             'max-lg:transition-[position, opacity, visibility] flex items-center gap-[16px] text-button max-lg:fixed  max-lg:left-0 max-lg:top-[73px] max-lg:h-[calc(100vh_-_73px)] max-lg:w-full max-lg:flex-col-reverse max-lg:gap-[16px] max-lg:overflow-y-scroll max-lg:bg-background max-lg:p-[16px] max-lg:duration-500 max-lg:ease-out lg:pl-[16px]',
             {
@@ -115,19 +131,87 @@ const Navbar: React.FC = () => {
             },
           )}
         >
-          <ul className="flex gap-[24px] max-lg:flex-1 max-lg:flex-col max-lg:items-center max-lg:gap-[32px]">
-            {sections.map((section) => (
-              <li key={section.href}>
-                <Link
-                  className="text-text animation hover:text-neutral"
-                  href={section.href}
-                >
-                  {section.name}
-                </Link>
-              </li>
-            ))}
+          <div className="flex w-full flex-col items-center gap-[2px] border-t-2 border-t-border p-[32px] text-body lg:hidden">
+            <p className="text-heading">Ahmad Gazali</p>
+            <p className="pb-[16px] text-subheading text-neutral">
+              Software Developer &amp; UX/UI Designer
+            </p>
+            <Link
+              href="mailto:gazali.contact@gmail.com"
+              className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
+            >
+              <EnvelopeIcon width={20} height={20} /> gazali.contact@gmail.com
+            </Link>
+            <Link
+              href="tel:+16613332888"
+              className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
+            >
+              <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/ahmad-gazali/"
+              className="flex items-center gap-[10px] pb-[16px] text-secondary animation hover:opacity-50"
+            >
+              <svg
+                className="mr-[4px] h-[16px] w-[16px]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 28"
+                fill="currentColor"
+              >
+                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
+              </svg>{' '}
+              LinkedIn
+            </Link>
+            <strong className="flex w-fit items-center gap-[9px] text-button text-good animation max-lg:justify-center">
+              Available for Hire{' '}
+              <span className="relative h-[11px] w-[12px]">
+                <span className="absolute h-[11px] w-[12px] animate-ping rounded-md bg-good default-border" />
+                <span className="absolute h-[11px] w-[12px] rounded-md bg-good default-border" />
+              </span>
+            </strong>
+          </div>
+          <ul className="flex gap-[24px] max-lg:flex-1 max-lg:flex-col max-lg:items-center max-lg:gap-[32px] max-lg:pb-[32px]">
+            <li>
+              <button
+                onClick={() => {
+                  projectsRef.current?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                  toggleMenu();
+                }}
+                className="cursor-pointer text-text animation hover:text-neutral"
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  skillsRef.current?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                  toggleMenu();
+                }}
+                className="cursor-pointer text-text animation hover:text-neutral"
+              >
+                Skills
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  contactRef.current?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                  toggleMenu();
+                }}
+                className="cursor-pointer text-text animation hover:text-neutral"
+              >
+                Contact
+              </button>
+            </li>
           </ul>
-        </div>
+        </section>
       </nav>
     </header>
   );

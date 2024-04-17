@@ -74,7 +74,7 @@ export const ProfilePic = () => {
   const getInterpolatedDiff = (x: number) =>
     (160 / (4 * Math.pow(x, 2) - 780 * x + 44425)) * 200;
 
-  const onMouseLeaveHandler = () => {
+  const onMouseLeaveHandler = React.useCallback(() => {
     isMouseOverPic.current = false;
     if (!profilePicRef.current) {
       return;
@@ -85,7 +85,7 @@ export const ProfilePic = () => {
     const rDiff = (155 - trailerRadius) / speed,
       xDiff = (width / 2 - trailerX) / speed,
       yDiff = (height / 2 - trailerY) / speed;
-    const step = (timestamp: number) => {
+    const step = () => {
       if (isMouseOverPic.current) {
         return;
       }
@@ -104,14 +104,14 @@ export const ProfilePic = () => {
       animationRequestRef.current = requestAnimationFrame(step);
     };
     animationRequestRef.current = requestAnimationFrame(step);
-  };
+  }, [trailerRadius, trailerX, trailerY]);
 
   const onMouseMoveHandler = () => {
     if (isMouseOverPic.current) {
       return;
     }
     isMouseOverPic.current = true;
-    const step = (timestamp: number) => {
+    const step = () => {
       if (!isMouseOverPic.current) {
         return;
       }
@@ -128,7 +128,45 @@ export const ProfilePic = () => {
     };
     animationRequestRef.current = requestAnimationFrame(step);
   };
-  const [showAscii, setShowAscii] = React.useState(true);
+  // Check every 3 seconds if isMouseOverPic is still true, if not, call onMouseLeaveHandler
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isMouseOverPic.current) {
+        onMouseLeaveHandler();
+      }
+    }, 3000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [onMouseLeaveHandler]);
+  const [showAscii, setShowAscii] = React.useState(false);
+  const [showPointer, setShowPointer] = React.useState(false);
+  const [hasBeenPressed, setHasBeenPressed] = React.useState(false);
+  React.useEffect(() => {
+    if (showAscii) {
+      setHasBeenPressed(true);
+    }
+  }, [showAscii]);
+  React.useEffect(() => {
+    setShowPointer(true);
+    setTimeout(() => {
+      setShowPointer(false);
+    }, 2000);
+  }, []);
+  React.useEffect(() => {
+    if (hasBeenPressed) {
+      return;
+    }
+    const interval = setInterval(() => {
+      setShowPointer(true);
+      setTimeout(() => {
+        setShowPointer(false);
+      }, 2000);
+    }, 20000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [hasBeenPressed, setHasBeenPressed]);
   const toggleAscii = () => setShowAscii(!showAscii);
   return (
     <div className="relative">
@@ -152,6 +190,16 @@ export const ProfilePic = () => {
           </textPath>
         </text>
       </svg>
+      <Image
+        className={clsx(
+          'pointer-events-none absolute -bottom-2 -left-2 z-40 rotate-[30deg] transition-opacity duration-500 ease-in-out',
+          { 'opacity-0': !showPointer },
+        )}
+        src="/click.gif"
+        width={120}
+        height={120}
+        alt="click"
+      />
       <div className="relative max-h-[310px] min-h-[310px] min-w-[310px] max-w-[310px] overflow-hidden rounded-full bg-[rgb(var(--color-border)/0.25)] default-border">
         <pre
           ref={profilePicAsciiRef}

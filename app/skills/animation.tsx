@@ -37,7 +37,7 @@ export const Animation = () => {
   }
   const onMouseEnterHandler = () => {
     isMouseOver.current = true;
-    const step = (timestamp: number) => {
+    const step = () => {
       setFrameIndex((prev) => {
         if (prev >= frameCount - 1) {
           animationRequestRef.current &&
@@ -55,7 +55,7 @@ export const Animation = () => {
   };
   const onMouseLeaveHandler = () => {
     isMouseOver.current = false;
-    const step = (timestamp: number) => {
+    const step = () => {
       setFrameIndex((prev) => {
         if (prev <= 0) {
           animationRequestRef.current &&

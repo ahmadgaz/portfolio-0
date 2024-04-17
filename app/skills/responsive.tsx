@@ -61,13 +61,15 @@ export const Responsive = () => {
     >
       <h3 className="z-10 w-full text-heading">Responsive User Interfaces</h3>
       <p className="z-10 w-full text-subheading text-neutral">
-        I have experience building front end applications using React, Next.js,
-        and Tailwind CSS.
+        I design and develop user interfaces that{' '}
+        <strong className="font-bold">adapt seamlessly across devices</strong>.
       </p>
-      <canvas
-        ref={canvasRef}
-        className="absolute -bottom-10 -left-10 w-[500px] p-3"
-      />
+      <div className="relative h-[200px] w-full">
+        <canvas
+          ref={canvasRef}
+          className="absolute p-3 max-lg:-bottom-28 max-lg:-left-24 max-lg:w-[550px] lg:-bottom-20 lg:-left-20 lg:w-[450px]"
+        />
+      </div>
     </div>
   );
 };

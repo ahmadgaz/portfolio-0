@@ -3,10 +3,10 @@
 import React from 'react';
 
 const currentFrame = (index: number) =>
-  `/experience-assets/skills-frontend/skills-frontend_${index.toString().padStart(5, '0')}.jpg`;
+  `/experience-assets/skills-animation/skills-animations_${index.toString().padStart(5, '0')}.jpg`;
 
-export const Frontend = () => {
-  const frameCount = 46;
+export const Animation = () => {
+  const frameCount = 30;
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const animationRequestRef = React.useRef<number | null>(null);
   const [frameIndex, setFrameIndex] = React.useState(0);
@@ -75,15 +75,14 @@ export const Frontend = () => {
     <div
       onMouseEnter={onMouseEnterHandler}
       onMouseLeave={onMouseLeaveHandler}
-      className="relative flex w-[300px] flex-col items-center gap-[8px] overflow-hidden rounded-lg bg-[rgb(254,254,254)] p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper max-lg:w-full lg:max-w-[506px]"
+      className="relative flex w-[250px] flex-col items-center gap-[8px] overflow-hidden rounded-lg bg-[rgb(254,254,254)] p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper max-lg:w-full lg:max-w-[506px]"
     >
-      <h3 className="w-full text-heading">Front End Development</h3>
+      <h3 className="w-full text-heading">Smooth Animations</h3>
       <p className="w-full text-subheading text-neutral">
-        I create{' '}
-        <strong className="font-bold">dyncamic front-end applications</strong>{' '}
-        with a focus on delivering innovative solutions.
+        I create engaging animations to{' '}
+        <strong className="font-bold">enhance user interactions</strong>.
       </p>
-      <canvas ref={canvasRef} className="p-3 max-lg:w-[400px] lg:w-[250px]" />
+      <canvas ref={canvasRef} className="w-[200px] p-3" />
     </div>
   );
 };

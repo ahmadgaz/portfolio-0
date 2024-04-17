@@ -8,6 +8,8 @@ import { CubeTransparentIcon, SparklesIcon } from '@heroicons/react/24/solid';
 
 import { lora } from './lora';
 import { ProfilePic } from './profile-pic';
+import { Animation } from './skills/animation';
+import { Design } from './skills/design';
 import { Frontend } from './skills/frontend';
 import { Responsive } from './skills/responsive';
 
@@ -49,7 +51,6 @@ export default function Page() {
         </div>
         <ProfilePic />
       </section>
-
       <hr className="my-[56px] border border-border" />
       <section className="flex flex-col gap-[40px]">
         <div className="mx-auto flex max-w-[700px] flex-col gap-[14px]">
@@ -204,6 +205,91 @@ export default function Page() {
         <div className="flex max-w-full flex-wrap items-stretch gap-[16px] pt-[16px]">
           <Frontend />
           <Responsive />
+          <Animation />
+          <Design />
+        </div>
+
+        <div className="mx-auto flex max-w-[700px] flex-col gap-[14px] pt-[32px]">
+          <h1 className="text-title">My Toolkit.</h1>
+          <p className="text-neutral">
+            These are the everyday tools and technologies I use to bring ideas
+            to life. I have extensive knowledge in HMTL, CSS, JavaScript (ES6),
+            Typescript, React, Next.JS 14, Node.JS, MongoDB, Firebase, Supabase,
+            Figma, and Adobe CC. I&apos;m always learning and experimenting with
+            new tools, and I'm open to trying new things! 🚀
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-center gap-[16px] pb-[28px]">
+          <Image
+            src="/javascript.png"
+            className="h-[30px] w-[30px]"
+            width={30}
+            height={30}
+            alt="JavaScript"
+          />
+          <Image
+            src="/typescript.png"
+            className="h-[30px] w-[30px]"
+            width={30}
+            height={30}
+            alt="TypeScript"
+          />
+          <Image
+            src="/react.png"
+            className="h-[30px]"
+            width={35}
+            height={30}
+            alt="React"
+          />
+          <Image
+            src="/nextjs.png"
+            className="h-[30px] w-[30px]"
+            width={30}
+            height={30}
+            alt="Next.js"
+          />
+          <Image
+            src="/nodejs.webp"
+            className="h-[30px] w-[30px]"
+            width={30}
+            height={30}
+            alt="Node.js"
+          />
+          <Image
+            src="/mongodb.png"
+            className="h-[30px] w-[15px]"
+            width={30}
+            height={30}
+            alt="MongoDB"
+          />
+          <Image
+            src="/firebase.png"
+            className="h-[30px] w-[30px]"
+            width={30}
+            height={30}
+            alt="Firebase"
+          />
+          <Image
+            src="/supabase.png"
+            className="h-[30px] w-[23px]"
+            width={30}
+            height={30}
+            alt="Supabase"
+          />
+          <Image
+            src="/figma.png"
+            className="h-[30px] w-[20px]"
+            width={30}
+            height={30}
+            alt="Figma"
+          />
+          <Image
+            src="/cc.svg"
+            className="h-[30px] w-[30px]"
+            width={30}
+            height={30}
+            alt="Adobe CC"
+          />
         </div>
       </section>
       <hr className="my-[56px] border border-border" />

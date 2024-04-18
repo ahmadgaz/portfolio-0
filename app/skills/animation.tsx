@@ -7,11 +7,15 @@ const currentFrame = (index: number) =>
 
 export const Animation = () => {
   const frameCount = 30;
-  const canvasRef = React.useRef<HTMLCanvasElement>(null);
+  const desktopCanvasRef = React.useRef<HTMLCanvasElement>(null);
+  const mobileCanvasRef = React.useRef<HTMLCanvasElement>(null);
   const animationRequestRef = React.useRef<number | null>(null);
   const [frameIndex, setFrameIndex] = React.useState(0);
   const isMouseOver = React.useRef(false);
-  const updateImage = (index: number) => {
+  const updateImage = (
+    canvasRef: React.RefObject<HTMLCanvasElement>,
+    index: number,
+  ) => {
     if (!canvasRef.current) {
       return;
     }
@@ -30,11 +34,24 @@ export const Animation = () => {
       const img = new Image();
       img.src = currentFrame(i);
     }
-    updateImage(frameIndex);
+    updateImage(desktopCanvasRef, frameIndex);
   }, [frameIndex]);
-  if (canvasRef.current) {
-    updateImage(frameIndex);
+  if (desktopCanvasRef.current) {
+    updateImage(desktopCanvasRef, frameIndex);
   }
+  React.useEffect(() => {
+    updateImage(mobileCanvasRef, 0);
+  }, []);
+  React.useEffect(() => {
+    onMouseEnterHandler();
+    setTimeout(() => {
+      onMouseLeaveHandler();
+    }, 1500);
+    return () => {
+      animationRequestRef.current &&
+        cancelAnimationFrame(animationRequestRef.current);
+    };
+  }, []);
   const onMouseEnterHandler = () => {
     isMouseOver.current = true;
     const step = () => {
@@ -82,7 +99,8 @@ export const Animation = () => {
         I create engaging animations to{' '}
         <strong className="font-bold">enhance user interactions</strong>.
       </p>
-      <canvas ref={canvasRef} className="w-[200px] p-3" />
+      <canvas ref={desktopCanvasRef} className="w-[200px] p-3 max-lg:hidden" />
+      <canvas ref={mobileCanvasRef} className="w-[200px] p-3 lg:hidden" />
     </div>
   );
 };

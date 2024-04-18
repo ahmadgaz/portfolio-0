@@ -7,11 +7,15 @@ const currentFrame = (index: number) =>
 
 export const Frontend = () => {
   const frameCount = 46;
-  const canvasRef = React.useRef<HTMLCanvasElement>(null);
+  const desktopCanvasRef = React.useRef<HTMLCanvasElement>(null);
+  const mobileCanvasRef = React.useRef<HTMLCanvasElement>(null);
   const animationRequestRef = React.useRef<number | null>(null);
   const [frameIndex, setFrameIndex] = React.useState(0);
   const isMouseOver = React.useRef(false);
-  const updateImage = (index: number) => {
+  const updateImage = (
+    canvasRef: React.RefObject<HTMLCanvasElement>,
+    index: number,
+  ) => {
     if (!canvasRef.current) {
       return;
     }
@@ -30,14 +34,27 @@ export const Frontend = () => {
       const img = new Image();
       img.src = currentFrame(i);
     }
-    updateImage(frameIndex);
+    updateImage(desktopCanvasRef, frameIndex);
   }, [frameIndex]);
-  if (canvasRef.current) {
-    updateImage(frameIndex);
+  if (desktopCanvasRef.current) {
+    updateImage(desktopCanvasRef, frameIndex);
   }
+  React.useEffect(() => {
+    updateImage(mobileCanvasRef, 0);
+  }, []);
+  React.useEffect(() => {
+    onMouseEnterHandler();
+    setTimeout(() => {
+      onMouseLeaveHandler();
+    }, 1500);
+    return () => {
+      animationRequestRef.current &&
+        cancelAnimationFrame(animationRequestRef.current);
+    };
+  }, []);
   const onMouseEnterHandler = () => {
     isMouseOver.current = true;
-    const step = (timestamp: number) => {
+    const step = () => {
       setFrameIndex((prev) => {
         if (prev >= frameCount - 1) {
           animationRequestRef.current &&
@@ -55,7 +72,7 @@ export const Frontend = () => {
   };
   const onMouseLeaveHandler = () => {
     isMouseOver.current = false;
-    const step = (timestamp: number) => {
+    const step = () => {
       setFrameIndex((prev) => {
         if (prev <= 0) {
           animationRequestRef.current &&
@@ -83,7 +100,8 @@ export const Frontend = () => {
         <strong className="font-bold">dyncamic front-end applications</strong>{' '}
         with a focus on delivering innovative solutions.
       </p>
-      <canvas ref={canvasRef} className="p-3 max-lg:w-[400px] lg:w-[250px]" />
+      <canvas ref={desktopCanvasRef} className="w-[250px] p-3 max-lg:hidden" />
+      <canvas ref={mobileCanvasRef} className="w-[250px] p-3 lg:hidden" />
     </div>
   );
 };

@@ -7,11 +7,15 @@ const currentFrame = (index: number) =>
 
 export const Responsive = () => {
   const frameCount = 91;
-  const canvasRef = React.useRef<HTMLCanvasElement>(null);
+  const desktopCanvasRef = React.useRef<HTMLCanvasElement>(null);
+  const mobileCanvasRef = React.useRef<HTMLCanvasElement>(null);
   const animationRequestRef = React.useRef<number | null>(null);
   const [frameIndex, setFrameIndex] = React.useState(0);
   const isMouseOver = React.useRef(false);
-  const updateImage = (index: number) => {
+  const updateImage = (
+    canvasRef: React.RefObject<HTMLCanvasElement>,
+    index: number,
+  ) => {
     if (!canvasRef.current) {
       return;
     }
@@ -30,14 +34,32 @@ export const Responsive = () => {
       const img = new Image();
       img.src = currentFrame(i);
     }
-    updateImage(frameIndex);
+    updateImage(desktopCanvasRef, frameIndex);
   }, [frameIndex]);
-  if (canvasRef.current) {
-    updateImage(frameIndex);
+  React.useEffect(() => {
+    updateImage(mobileCanvasRef, 0);
+  }, []);
+  React.useEffect(() => {
+    let iterations = 3;
+    const interval = setInterval(() => {
+      onMouseEnterOrLeaveHandler();
+      iterations--;
+      if (iterations === 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+      animationRequestRef.current &&
+        cancelAnimationFrame(animationRequestRef.current);
+    };
+  }, []);
+  if (desktopCanvasRef.current) {
+    updateImage(desktopCanvasRef, frameIndex);
   }
   const onMouseEnterOrLeaveHandler = () => {
     isMouseOver.current = true;
-    const step = (timestamp: number) => {
+    const step = () => {
       setFrameIndex((prev) => {
         if ((prev + 1) % ((frameCount - 1) / 3) === 0) {
           animationRequestRef.current &&
@@ -64,10 +86,14 @@ export const Responsive = () => {
         I design and develop user interfaces that{' '}
         <strong className="font-bold">adapt seamlessly across devices</strong>.
       </p>
-      <div className="relative h-[200px] w-full">
+      <div className="relative h-[200px] max-lg:w-[250px] lg:w-[350px]">
         <canvas
-          ref={canvasRef}
-          className="absolute p-3 max-lg:-bottom-28 max-lg:-left-24 max-lg:w-[550px] lg:-bottom-20 lg:-left-20 lg:w-[450px]"
+          ref={desktopCanvasRef}
+          className="absolute -bottom-20 -left-20 w-[450px] p-3 max-lg:hidden"
+        />
+        <canvas
+          ref={mobileCanvasRef}
+          className="absolute -bottom-16 -left-24 w-[400px] p-3 lg:hidden"
         />
       </div>
     </div>

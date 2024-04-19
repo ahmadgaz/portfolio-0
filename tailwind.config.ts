@@ -47,6 +47,10 @@ const config: Config = {
         '17px',
         { lineHeight: '26px', letterSpacing: '0.02em', fontWeight: 600 },
       ],
+      logo: [
+        '17px',
+        { lineHeight: '26px', letterSpacing: '0.02em', fontWeight: 900 },
+      ],
       subheading: ['15px', { lineHeight: '20px', fontWeight: 300 }],
       'body-bold': ['17px', { lineHeight: '22px', fontWeight: 700 }],
       body: [

@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({
       <nav className="mx-auto box-border flex h-[73px] items-center justify-between px-[32px] animation max-width">
         {/* Logo */}
         <Link
-          className="text-text animation hover:text-neutral lg:pr-[32px]"
+          className="flex items-center gap-[10px] text-text animation hover:text-neutral lg:pr-[32px]"
           href="/"
         >
           <svg
@@ -108,6 +108,7 @@ const Navbar: React.FC<NavbarProps> = ({
               fill="currentColor"
             />
           </svg>
+          <span className="text-logo max-lg:hidden">gaza.li</span>
         </Link>
 
         <button
@@ -132,25 +133,25 @@ const Navbar: React.FC<NavbarProps> = ({
           )}
         >
           <div className="flex w-full flex-col items-center gap-[2px] border-t-2 border-t-border p-[32px] text-body lg:hidden">
-            <p className="text-heading">Ahmad Gazali</p>
-            <p className="pb-[16px] text-subheading text-neutral">
+            <p className="text-center text-heading">Ahmad Gazali</p>
+            <p className="pb-[16px] text-center text-subheading text-neutral">
               Software Developer &amp; UX/UI Designer
             </p>
             <Link
               href="mailto:gazali.contact@gmail.com"
-              className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
+              className="flex items-center gap-[10px] text-center text-secondary animation hover:opacity-50"
             >
               <EnvelopeIcon width={20} height={20} /> gazali.contact@gmail.com
             </Link>
             <Link
               href="tel:+16613332888"
-              className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
+              className="flex items-center gap-[10px] text-center text-secondary animation hover:opacity-50"
             >
               <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
             </Link>
             <Link
               href="https://www.linkedin.com/in/ahmad-gazali/"
-              className="flex items-center gap-[10px] pb-[16px] text-secondary animation hover:opacity-50"
+              className="flex items-center gap-[10px] pb-[16px] text-center text-secondary animation hover:opacity-50"
             >
               <svg
                 className="mr-[4px] h-[16px] w-[16px]"
@@ -162,7 +163,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </svg>{' '}
               LinkedIn
             </Link>
-            <strong className="flex w-fit items-center gap-[9px] text-button text-good animation max-lg:justify-center">
+            <strong className="flex w-fit items-center gap-[9px] text-center text-button text-good animation max-lg:justify-center">
               Available for Hire{' '}
               <span className="relative h-[11px] w-[12px]">
                 <span className="absolute h-[11px] w-[12px] animate-ping rounded-md bg-good default-border" />

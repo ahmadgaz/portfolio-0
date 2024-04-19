@@ -209,7 +209,7 @@ export default function Page() {
               </Link>
               <Link
                 target="_blank"
-                href="/"
+                href="https://www.behance.net/gallery/196503029/Professor-Rating-Platform"
                 className="relative flex min-h-[600px] flex-1  flex-col gap-[8px] overflow-hidden rounded-lg p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image
@@ -223,13 +223,13 @@ export default function Page() {
                   ACM-CS@SJSU
                 </p>
                 <h3 className="text-title font-extrabold">
-                  Course Scheduler &amp; Professor Rating Platform
+                  Professor Rating Platform
                 </h3>
                 <div className="h-[400px] w-full lg:hidden" />
               </Link>
               <Link
                 target="_blank"
-                href="/"
+                href="https://www.behance.net/gallery/196504113/Eatin"
                 className="relative flex min-h-[700px] flex-1 flex-col gap-[8px] overflow-hidden rounded-lg bg-[#F9F2DC] p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image

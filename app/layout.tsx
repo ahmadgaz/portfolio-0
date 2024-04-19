@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google';
 import './global.css';
 
 export const metadata: Metadata = {
-  title: 'Ahmad | Freelance Web Developer',
-  description: 'Freelance UX/UI Designer and Web Developer',
+  title: 'Ahmad Gazali | UX/UI Designer & Software Developer',
+  description: 'UX/UI Designer & Web Developer',
   openGraph: {
     type: 'website',
     // images

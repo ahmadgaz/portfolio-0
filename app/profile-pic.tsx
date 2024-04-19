@@ -192,7 +192,7 @@ export const ProfilePic = () => {
       </svg>
       <Image
         className={clsx(
-          'pointer-events-none absolute -bottom-2 -left-2 z-40 rotate-[30deg] transition-opacity duration-500 ease-in-out max-lg:hidden',
+          'pointer-events-none absolute -bottom-2 -left-2 z-40 rotate-[30deg] transition-opacity duration-500 ease-in-out max-lg:hidden lg:hidden',
           { 'opacity-0': !showPointer },
         )}
         src="/click.gif"
@@ -201,13 +201,13 @@ export const ProfilePic = () => {
         alt="click"
       />
       <Image
-        className="max-h-[310px] min-h-[310px] min-w-[310px] max-w-[310px] overflow-hidden rounded-full bg-[rgb(var(--color-border)/0.25)] default-border lg:hidden"
+        className="max-h-[310px] min-h-[310px] min-w-[310px] max-w-[310px] overflow-hidden rounded-full bg-[rgb(var(--color-border)/0.25)] default-border"
         src="/profile-pic-base.png"
         width={310}
         height={310}
         alt="profile-pic"
       />
-      <div className="relative max-h-[310px] min-h-[310px] min-w-[310px] max-w-[310px] overflow-hidden rounded-full bg-[rgb(var(--color-border)/0.25)] default-border max-lg:hidden">
+      <div className="relative max-h-[310px] min-h-[310px] min-w-[310px] max-w-[310px] overflow-hidden rounded-full bg-[rgb(var(--color-border)/0.25)] default-border max-lg:hidden lg:hidden">
         <pre
           ref={profilePicAsciiRef}
           className="absolute text-ascii text-[rgb(var(--color-text)/0.5)]"
@@ -215,7 +215,7 @@ export const ProfilePic = () => {
         <button
           onClick={toggleAscii}
           className={clsx(
-            'absolute rounded-full animation hover:opacity-100 active:opacity-30 max-lg:hidden',
+            'absolute rounded-full animation hover:opacity-100 active:opacity-30 max-lg:hidden lg:hidden',
             {
               'opacity-0': showAscii,
             },

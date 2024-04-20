@@ -6,9 +6,30 @@ import './global.css';
 export const metadata: Metadata = {
   title: 'Ahmad Gazali | UX/UI Designer & Software Developer',
   description: 'UX/UI Designer & Web Developer',
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/favicon-light.svg',
+        href: '/favicon-light.svg',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/favicon-dark.svg',
+        href: '/favicon-dark.svg',
+      },
+    ],
+  },
   openGraph: {
     type: 'website',
-    // images
+    images: [
+      {
+        url: '/preview-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ahmad Gazali | UX/UI Designer & Software Developer',
+      },
+    ],
   },
 };
 
@@ -25,9 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
+      <head></head>
       <body className={`${inter.className} text-body`}>{children}</body>
     </html>
   );

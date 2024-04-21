@@ -151,6 +151,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </Link>
             <Link
               href="https://www.linkedin.com/in/ahmad-gazali/"
+              target="_blank"
               className="flex items-center gap-[10px] pb-[16px] text-center text-secondary animation hover:opacity-50"
             >
               <svg

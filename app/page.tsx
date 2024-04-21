@@ -106,6 +106,7 @@ export default function Page() {
               </Link>
               <Link
                 href="https://www.linkedin.com/in/ahmad-gazali/"
+                target="_blank"
                 className="flex items-center justify-center gap-[10px] pb-[16px] text-secondary animation hover:opacity-50"
               >
                 <svg

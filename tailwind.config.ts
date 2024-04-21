@@ -53,10 +53,7 @@ const config: Config = {
       ],
       subheading: ['15px', { lineHeight: '20px', fontWeight: 300 }],
       'body-bold': ['17px', { lineHeight: '22px', fontWeight: 700 }],
-      body: [
-        '17px',
-        { lineHeight: '26px', letterSpacing: '0.02em', fontWeight: 400 },
-      ],
+      body: ['17px', { lineHeight: '26px', fontWeight: 400 }],
       button: [
         '16px',
         { letterSpacing: '-0.02em', lineHeight: '19.4px', fontWeight: 500 },

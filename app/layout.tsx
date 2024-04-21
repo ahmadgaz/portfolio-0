@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './global.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.gaza.li'),
   title: 'Ahmad Gazali | UX/UI Designer & Software Developer',
   description: 'UX/UI Designer & Web Developer',
   icons: {
@@ -21,15 +22,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    type: 'website',
-    images: [
-      {
-        url: '/preview-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Ahmad Gazali | UX/UI Designer & Software Developer',
-      },
-    ],
+    images: '/preview-image.png',
   },
 };
 

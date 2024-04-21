@@ -435,7 +435,7 @@ export default function Page() {
             </div>
           </section>
           <hr className="my-[56px] border border-border" />
-          <section className="flex justify-between gap-[16px]">
+          <section className="flex items-center justify-between gap-[16px]">
             <p className="text-neutral max-lg:text-caption">
               &copy; 2024 Ahmad Gazali. All rights reserved.
             </p>

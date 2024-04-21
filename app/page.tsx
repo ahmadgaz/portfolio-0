@@ -93,16 +93,16 @@ export default function Page() {
                 Need a designer or developer? Send me a message!
               </p>
               <Link
-                href="mailto:gazali.contact@gmail.com"
-                className="flex items-center justify-center gap-[10px] text-center text-secondary animation hover:opacity-50"
-              >
-                <EnvelopeIcon width={20} height={20} /> gazali.contact@gmail.com
-              </Link>
-              <Link
                 href="tel:+16613332888"
                 className="flex items-center justify-center gap-[10px] text-center text-secondary animation hover:opacity-50"
               >
                 <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
+              </Link>
+              <Link
+                href="mailto:contact@gaza.li"
+                className="flex items-center justify-center gap-[10px] text-center text-secondary animation hover:opacity-50"
+              >
+                <EnvelopeIcon width={20} height={20} /> contact@gaza.li
               </Link>
               <Link
                 href="https://www.linkedin.com/in/ahmad-gazali/"
@@ -397,17 +397,16 @@ export default function Page() {
                   Software Developer &amp; UX/UI Designer
                 </p>
                 <Link
-                  href="mailto:gazali.contact@gmail.com"
-                  className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
-                >
-                  <EnvelopeIcon width={20} height={20} />{' '}
-                  gazali.contact@gmail.com
-                </Link>
-                <Link
                   href="tel:+16613332888"
                   className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
                 >
                   <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
+                </Link>
+                <Link
+                  href="mailto:contact@gaza.li"
+                  className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
+                >
+                  <EnvelopeIcon width={20} height={20} /> contact@gaza.li
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/ahmad-gazali/"
@@ -436,17 +435,17 @@ export default function Page() {
           </section>
           <hr className="my-[56px] border border-border" />
           <section className="flex justify-between gap-[16px]">
-            <p className="text-neutral">
+            <p className="text-neutral max-lg:text-caption">
               &copy; 2024 Ahmad Gazali. All rights reserved.
             </p>
-            <section className="flex items-center gap-[16px]">
+            <section className="flex items-center gap-[16px] max-lg:gap-[12.8px]">
               <Link
                 href="https://www.linkedin.com/in/ahmad-gazali/"
                 target="_blank"
                 className="text-neutral hover:opacity-75"
               >
                 <svg
-                  className="h-[20px] w-[20px]"
+                  className="h-[20px] w-[20px] max-lg:h-[16px] max-lg:w-[16px]"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
@@ -455,13 +454,12 @@ export default function Page() {
                 </svg>
               </Link>
               <Link
-                href="/"
+                href="https://www.behance.net/ahmadgazali3"
                 target="_blank"
                 className="pt-[3px] text-neutral hover:opacity-75"
               >
                 <svg
-                  width="27"
-                  height="18"
+                  className="h-[18px] w-[27px] max-lg:h-[14.4px] max-lg:w-[21.6px]"
                   viewBox="0 0 27 18"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -478,8 +476,7 @@ export default function Page() {
                 className="text-neutral hover:opacity-75"
               >
                 <svg
-                  width="24"
-                  height="23"
+                  className="h-[23px] w-[24px] max-lg:h-[18.4px] max-lg:w-[19.2px]"
                   viewBox="0 0 24 23"
                   xmlns="http://www.w3.org/2000/svg"
                 >

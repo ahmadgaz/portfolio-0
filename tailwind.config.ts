@@ -69,6 +69,9 @@ const config: Config = {
       ],
     },
     extend: {
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+      },
       borderRadius: {
         lg: '24px',
         md: '12px',

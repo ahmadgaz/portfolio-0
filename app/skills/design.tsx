@@ -2,7 +2,7 @@ import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
 
 export const Design = () => (
   <div className="max-lg:items relative flex min-h-[250px] w-full justify-between gap-[31px] overflow-hidden rounded-lg bg-[rgb(254,254,254)] p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper max-lg:w-full max-lg:flex-col max-lg:items-center">
-    <div className="flex w-full flex-col gap-[8px]">
+    <section className="flex w-full flex-col gap-[8px]">
       <h3 className="w-full text-heading">Design Systems</h3>
       <p className="w-full text-subheading text-neutral">
         I develop cohesive design systems that{' '}
@@ -13,9 +13,9 @@ export const Design = () => (
         </strong>
         .
       </p>
-    </div>
-    <div className="flex gap-[10px]">
-      <div className="flex h-full w-[200px] flex-col items-center justify-center gap-[10px] rounded-md bg-background p-[20px] default-border">
+    </section>
+    <section className="flex gap-[10px]">
+      <section className="flex h-full w-[200px] flex-col items-center justify-center gap-[10px] rounded-md bg-background p-[20px] default-border">
         <ArrowUpTrayIcon width={28} height={28} />
         <h3 className="text-center text-[14px] text-heading leading-5">
           Upload Complete
@@ -26,12 +26,12 @@ export const Design = () => (
         <button className="w-full rounded-sm bg-background px-4 py-2 text-[14px] text-button font-bold text-primary animation default-border hover:opacity-75">
           Continue
         </button>
-      </div>
-      <div className="flex flex-col gap-[16px]">
-        <div className="flex flex-row-reverse gap-[10px]">
+      </section>
+      <section className="flex flex-col gap-[16px]">
+        <section className="flex flex-row-reverse gap-[10px]">
           <label className="inline-flex cursor-pointer items-center">
             <input type="checkbox" value="" className="peer sr-only" />
-            <div className="peer relative h-6 w-11 rounded-full bg-border after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-neutral after:bg-background after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-background peer-focus:outline-none peer-focus:ring-0 rtl:peer-checked:after:-translate-x-full dark:border-neutral"></div>
+            <section className="peer relative h-6 w-11 rounded-full bg-border after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-neutral after:bg-background after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-background peer-focus:outline-none peer-focus:ring-0 rtl:peer-checked:after:-translate-x-full dark:border-neutral"></section>
           </label>
           <label className="inline-flex cursor-pointer items-center">
             <input
@@ -47,17 +47,17 @@ export const Design = () => (
               className="h-5 w-5 border-neutral ring-0 checked:bg-primary"
             />
           </label>
-        </div>
+        </section>
         <button className="rounded-sm bg-primary px-4 py-2 text-[14px] text-button font-bold text-background animation hover:opacity-75">
           Submit
         </button>
         <button className="rounded-sm bg-background px-4 py-2 text-[14px] text-button font-bold text-primary animation default-border hover:opacity-75">
           Cancel
         </button>
-        <div className="flex gap-[10px]">
+        <section className="flex gap-[10px]">
           <label className="inline-flex cursor-pointer items-center">
             <input type="checkbox" value="" className="peer sr-only" />
-            <div className="peer relative h-6 w-11 rounded-full bg-border after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-neutral after:bg-background after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-background peer-focus:outline-none peer-focus:ring-0 rtl:peer-checked:after:-translate-x-full dark:border-neutral"></div>
+            <section className="peer relative h-6 w-11 rounded-full bg-border after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-neutral after:bg-background after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-background peer-focus:outline-none peer-focus:ring-0 rtl:peer-checked:after:-translate-x-full dark:border-neutral"></section>
           </label>
           <label className="inline-flex cursor-pointer items-center">
             <input
@@ -73,7 +73,7 @@ export const Design = () => (
               className="h-5 w-5 border-neutral ring-0 checked:bg-primary"
             />
           </label>
-        </div>
+        </section>
         <ul className="flex w-full">
           <li>
             <input
@@ -106,9 +106,9 @@ export const Design = () => (
             </label>
           </li>
         </ul>
-      </div>
-      <div className="flex h-full flex-col gap-[10px]">
-        <div className="flex h-fit w-[160px] flex-col gap-[10px] rounded-md bg-background p-[20px] default-border">
+      </section>
+      <section className="flex h-full flex-col gap-[10px]">
+        <section className="flex h-fit w-[160px] flex-col gap-[10px] rounded-md bg-background p-[20px] default-border">
           <h3 className="text-[14px] text-heading leading-5">
             Ahmad{' '}
             <span className="text-[12px] font-normal text-neutral">
@@ -119,7 +119,7 @@ export const Design = () => (
             A name of Arabic origin meaning praised or one who constantly thanks
             God.
           </p>
-        </div>
+        </section>
 
         <section className="flex gap-[10px]">
           <label className="inline-flex cursor-pointer items-center">
@@ -135,7 +135,7 @@ export const Design = () => (
             </section>
           </label>
         </section>
-      </div>
-    </div>
+      </section>
+    </section>
   </div>
 );

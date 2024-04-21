@@ -173,8 +173,8 @@ export const ProfilePic = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 300 300"
-        className={`${lora.className} pointer-events-none absolute -left-3 -top-3 z-10 -rotate-[70deg] select-none text-primary`}
+        viewBox="0 0 281 296"
+        className={`${lora.className} pointer-events-none absolute -left-5 -top-5 z-10 animate-spin-slow select-none text-primary`}
         width={150}
         height={150}
       >
@@ -184,9 +184,9 @@ export const ProfilePic = () => {
           stroke="none"
           d="M 32.550491,148.48008 A -108.15144,-108.15144 0 0 1 140.70194,40.328644 -108.15144,-108.15144 0 0 1 248.85338,148.48008 -108.15144,-108.15144 0 0 1 140.70194,256.63153 -108.15144,-108.15144 0 0 1 32.550491,148.48008 Z"
         />
-        <text fontSize="51" fill="currentColor">
+        <text fontSize="53" fill="currentColor">
           <textPath xlinkHref="#SunCatcherStudio" startOffset="0">
-            • • • • • • • • • • • • •
+            • • • • • • • • • • • • • • • • • • •
           </textPath>
         </text>
       </svg>

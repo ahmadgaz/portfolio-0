@@ -132,22 +132,22 @@ const Navbar: React.FC<NavbarProps> = ({
             },
           )}
         >
-          <div className="flex w-full flex-col items-center gap-[2px] border-t-2 border-t-border p-[32px] text-body lg:hidden">
+          <section className="flex w-full flex-col items-center gap-[2px] border-t-2 border-t-border p-[32px] text-body lg:hidden">
             <p className="text-center text-heading">Ahmad Gazali</p>
             <p className="pb-[16px] text-center text-subheading text-neutral">
               Software Developer &amp; UX/UI Designer
             </p>
             <Link
-              href="mailto:gazali.contact@gmail.com"
-              className="flex items-center gap-[10px] text-center text-secondary animation hover:opacity-50"
-            >
-              <EnvelopeIcon width={20} height={20} /> gazali.contact@gmail.com
-            </Link>
-            <Link
               href="tel:+16613332888"
               className="flex items-center gap-[10px] text-center text-secondary animation hover:opacity-50"
             >
               <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
+            </Link>
+            <Link
+              href="mailto:contact@gaza.li"
+              className="flex items-center gap-[10px] text-center text-secondary animation hover:opacity-50"
+            >
+              <EnvelopeIcon width={20} height={20} /> contact@gaza.li
             </Link>
             <Link
               href="https://www.linkedin.com/in/ahmad-gazali/"
@@ -170,7 +170,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 <span className="absolute h-[11px] w-[12px] rounded-md bg-good default-border" />
               </span>
             </strong>
-          </div>
+          </section>
           <ul className="flex gap-[24px] max-lg:flex-1 max-lg:flex-col max-lg:items-center max-lg:gap-[32px] max-lg:pb-[32px]">
             <li>
               <button

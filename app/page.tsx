@@ -5,7 +5,12 @@ import Link from 'next/link';
 import Script from 'next/script';
 import React from 'react';
 
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import {
+  DocumentArrowDownIcon,
+  DocumentIcon,
+  EnvelopeIcon,
+  PhoneIcon,
+} from '@heroicons/react/24/outline';
 import { CubeTransparentIcon, SparklesIcon } from '@heroicons/react/24/solid';
 
 import { lora } from './lora';
@@ -424,13 +429,24 @@ export default function Page() {
                   </svg>{' '}
                   LinkedIn
                 </Link>
-                <strong className="flex w-fit items-center gap-[9px] text-button text-good animation max-lg:justify-center">
+                <strong className="flex w-fit items-center gap-[9px] pb-[16px] text-button text-good animation max-lg:justify-center">
                   Available for Hire{' '}
-                  <span className="relative h-[11px] w-[12px]">
-                    <span className="absolute h-[11px] w-[12px] animate-ping rounded-md bg-good default-border" />
-                    <span className="absolute h-[11px] w-[12px] rounded-md bg-good default-border" />
+                  <span className="relative h-[11px] w-[11px]">
+                    <span className="absolute h-[11px] w-[11px] animate-ping rounded-md bg-good default-border" />
+                    <span className="absolute h-[11px] w-[11px] rounded-md bg-good default-border" />
                   </span>
                 </strong>
+                <button
+                  onClick={() => {
+                    window.open(
+                      'https://archive.org/download/resume-technical/resume-technical.pdf',
+                    );
+                  }}
+                  className="flex w-full items-center justify-center gap-[8px] rounded-lg px-[16px] py-[10px] text-button animation default-border hover:border-[rgb(var(--color-neutral)/0.2)]"
+                >
+                  <DocumentIcon strokeWidth={1.75} width={20} height={20} />{' '}
+                  Download Resume
+                </button>
               </div>
             </div>
           </section>

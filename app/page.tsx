@@ -2,11 +2,9 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import Script from 'next/script';
 import React from 'react';
 
 import {
-  DocumentArrowDownIcon,
   DocumentIcon,
   EnvelopeIcon,
   PhoneIcon,
@@ -40,7 +38,7 @@ export default function Page() {
                 AHMAD GAZALI <SparklesIcon width={14} height={14} />
               </h3>
               <h1 className="text-title max-lg:text-center">
-                UX/UI Designer &amp; Software Developer
+                Software Developer &amp; UX/UI Designer
               </h1>
               <p className="text-neutral max-lg:text-center">
                 <em className={`${lora.className} italic`}>
@@ -97,12 +95,6 @@ export default function Page() {
               <p className="text-center text-neutral">
                 Need a designer or developer? Send me a message!
               </p>
-              <Link
-                href="tel:+16613332888"
-                className="flex items-center justify-center gap-[10px] text-center text-secondary animation hover:opacity-50"
-              >
-                <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
-              </Link>
               <Link
                 href="mailto:contact@gaza.li"
                 className="flex items-center justify-center gap-[10px] text-center text-secondary animation hover:opacity-50"
@@ -391,7 +383,7 @@ export default function Page() {
             <div className="relative flex w-fit items-center gap-[32px] rounded-lg bg-background p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper max-lg:flex-col max-lg:items-center">
               <Image
                 className="rounded-full default-border"
-                src="/profile-pic-base.png"
+                src="/profile-pic-base.jpg"
                 width={200}
                 height={200}
                 alt="profile-pic"
@@ -402,12 +394,6 @@ export default function Page() {
                 <p className="pb-[16px] text-subheading text-neutral">
                   Software Developer &amp; UX/UI Designer
                 </p>
-                <Link
-                  href="tel:+16613332888"
-                  className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
-                >
-                  <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
-                </Link>
                 <Link
                   href="mailto:contact@gaza.li"
                   className="flex items-center gap-[10px] text-secondary animation hover:opacity-50"
@@ -505,7 +491,6 @@ export default function Page() {
           </section>
         </main>
       </main>
-      <Script src="/profile-pic-ascii.js" />
     </>
   );
 }

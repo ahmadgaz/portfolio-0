@@ -6,8 +6,9 @@ import './global.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gaza.li'),
-  title: 'Ahmad Gazali | UX/UI Designer & Software Developer',
-  description: 'UX/UI Designer & Web Developer',
+  title: 'Software Developer & UX/UI Designer | Ahmad Gazali',
+  description:
+    'Software Developer & UX/UI Designer passionate about creating beautiful and functional digital products and web designs. I specialize in front-end web development and design systems. I am currently available for hire and open to new opportunities. Let’s work together to create something amazing!',
   openGraph: {
     images: '/preview-image.png',
   },

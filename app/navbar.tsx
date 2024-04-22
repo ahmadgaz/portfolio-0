@@ -7,7 +7,6 @@ import React from 'react';
 import {
   Bars3Icon,
   EnvelopeIcon,
-  PhoneIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 type NavbarProps = {
@@ -137,12 +136,6 @@ const Navbar: React.FC<NavbarProps> = ({
             <p className="pb-[16px] text-center text-subheading text-neutral">
               Software Developer &amp; UX/UI Designer
             </p>
-            <Link
-              href="tel:+16613332888"
-              className="flex items-center gap-[10px] text-center text-secondary animation hover:opacity-50"
-            >
-              <PhoneIcon width={20} height={20} /> +1 (661) 333-2888
-            </Link>
             <Link
               href="mailto:contact@gaza.li"
               className="flex items-center gap-[10px] text-center text-secondary animation hover:opacity-50"

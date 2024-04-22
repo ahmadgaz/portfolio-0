@@ -429,7 +429,7 @@ export default function Page() {
                   </svg>{' '}
                   LinkedIn
                 </Link>
-                <strong className="flex w-fit items-center gap-[9px] pb-[16px] text-button text-good animation max-lg:justify-center">
+                <strong className="flex w-fit items-center gap-[9px] pb-[24px] text-button text-good animation max-lg:justify-center">
                   Available for Hire{' '}
                   <span className="relative h-[11px] w-[11px]">
                     <span className="absolute h-[11px] w-[11px] animate-ping rounded-md bg-good default-border" />

@@ -82,9 +82,9 @@ export default function Page() {
                 >
                   <strong className="flex items-center gap-[3px] text-button max-lg:justify-center">
                     Available for Hire{' '}
-                    <span className="relative h-[11px] w-[12px]">
-                      <span className="absolute h-[11px] w-[12px] animate-ping rounded-md bg-good default-border" />
-                      <span className="absolute h-[11px] w-[12px] rounded-md bg-good default-border" />
+                    <span className="relative h-[11px] w-[11px]">
+                      <span className="absolute h-[11px] w-[11px] animate-ping rounded-md bg-good default-border" />
+                      <span className="absolute h-[11px] w-[11px] rounded-md bg-good default-border" />
                     </span>
                   </strong>
                 </button>

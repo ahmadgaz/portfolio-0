@@ -166,9 +166,9 @@ const Navbar: React.FC<NavbarProps> = ({
             </Link>
             <strong className="flex w-fit items-center gap-[9px] text-center text-button text-good animation max-lg:justify-center">
               Available for Hire{' '}
-              <span className="relative h-[11px] w-[12px]">
-                <span className="absolute h-[11px] w-[12px] animate-ping rounded-md bg-good default-border" />
-                <span className="absolute h-[11px] w-[12px] rounded-md bg-good default-border" />
+              <span className="relative h-[11px] w-[11px]">
+                <span className="absolute h-[11px] w-[11px] animate-ping rounded-md bg-good default-border" />
+                <span className="absolute h-[11px] w-[11px] rounded-md bg-good default-border" />
               </span>
             </strong>
           </section>

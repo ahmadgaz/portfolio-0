@@ -436,17 +436,14 @@ export default function Page() {
                     <span className="absolute h-[11px] w-[11px] rounded-md bg-good default-border" />
                   </span>
                 </strong>
-                <button
-                  onClick={() => {
-                    window.open(
-                      'https://archive.org/download/resume-technical/resume-technical.pdf',
-                    );
-                  }}
+                <Link
+                  href="https://archive.org/download/resume-technical/resume-technical.pdf"
+                  target="_blank"
                   className="flex w-full items-center justify-center gap-[8px] rounded-lg px-[16px] py-[10px] text-button animation default-border hover:border-[rgb(var(--color-neutral)/0.2)]"
                 >
                   <DocumentIcon strokeWidth={1.75} width={20} height={20} />{' '}
                   Download Resume
-                </button>
+                </Link>
               </div>
             </div>
           </section>

@@ -145,13 +145,13 @@ export default function Page() {
                 className="relative flex min-h-[700px] flex-1 flex-col justify-end gap-[8px] overflow-hidden rounded-lg bg-[rgb(255,254,203)] p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image
-                  className="absolute -left-20 max-lg:-top-24 lg:bottom-24"
+                  className="absolute -left-20 min-w-[500px] max-w-[500px] max-lg:-top-24 lg:bottom-24"
                   src="/experience-assets/bookbunny-preview.png"
                   width={500}
                   height={600}
                   alt="Bookbunny Preview"
                 />
-                <div className="h-[500px] w-full lg:hidden" />
+                <div className="h-[725px] w-full lg:hidden" />
                 <p className="text-subtitle text-[rgb(var(--color-neutral)/0.75)]">
                   BOOKBUNNY
                 </p>
@@ -165,7 +165,7 @@ export default function Page() {
                 className="relative flex min-h-[600px] flex-1 flex-col gap-[8px]  overflow-hidden rounded-lg bg-[#260B1E] p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image
-                  className="absolute right-0 max-lg:-bottom-32 lg:top-0"
+                  className="absolute right-0 min-w-[500px] max-w-[500px] max-lg:-bottom-64 max-lg:-right-0 max-md:-right-28 lg:top-0"
                   src="/experience-assets/vr-club-preview.png"
                   width={500}
                   height={600}
@@ -177,7 +177,7 @@ export default function Page() {
                 <h3 className="text-title font-extrabold text-background">
                   University Club Website with Integrated CMS
                 </h3>
-                <div className="h-[400px] w-full lg:hidden" />
+                <div className="h-[450px] w-full lg:hidden" />
               </Link>
               <Link
                 target="_blank"
@@ -211,7 +211,7 @@ export default function Page() {
                 className="relative flex min-h-[600px] flex-1  flex-col gap-[8px] overflow-hidden rounded-lg p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image
-                  className="absolute right-0 max-lg:-bottom-24 lg:-top-10"
+                  className="absolute right-0 min-w-[500px] max-w-[500px] max-lg:-bottom-24 lg:-top-10"
                   src="/experience-assets/course-scheduler-preview.png"
                   width={500}
                   height={600}
@@ -223,7 +223,7 @@ export default function Page() {
                 <h3 className="text-title font-extrabold">
                   Professor Rating Platform
                 </h3>
-                <div className="h-[400px] w-full lg:hidden" />
+                <div className="h-[550px] w-full lg:hidden" />
               </Link>
               <Link
                 target="_blank"
@@ -231,7 +231,7 @@ export default function Page() {
                 className="relative flex min-h-[700px] flex-1 flex-col gap-[8px] overflow-hidden rounded-lg bg-[#F9F2DC] p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image
-                  className="absolute right-0 max-lg:-bottom-20 lg:top-20"
+                  className="absolute right-0 min-w-[500px] max-w-[500px] max-lg:-bottom-72 lg:top-20"
                   src="/experience-assets/eatin-preview.png"
                   width={500}
                   height={600}
@@ -251,7 +251,7 @@ export default function Page() {
                 className="relative flex min-h-[300px] flex-1 flex-col  gap-[8px] overflow-hidden rounded-lg p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image
-                  className="absolute right-0 max-lg:-bottom-32 lg:-top-24"
+                  className="absolute right-0 min-w-[500px] max-w-[500px] max-lg:-bottom-60 max-lg:-right-10 max-md:-right-40 lg:-top-24"
                   src="/experience-assets/sjsul-preview.png"
                   width={500}
                   height={600}
@@ -263,7 +263,7 @@ export default function Page() {
                 <h3 className="text-title font-extrabold">
                   Library Management System
                 </h3>
-                <div className="h-[300px] w-full lg:hidden" />
+                <div className="h-[360px] w-full lg:hidden" />
               </Link>
             </section>
           </section>

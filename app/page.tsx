@@ -423,7 +423,7 @@ export default function Page() {
                   </span>
                 </strong>
                 <Link
-                  href="https://archive.org/download/resume-technical/resume-technical.pdf"
+                  href="https://ia600308.us.archive.org/9/items/resume-technical_202405/resume-technical.pdf"
                   target="_blank"
                   className="flex w-full items-center justify-center gap-[8px] rounded-lg px-[16px] py-[10px] text-button animation default-border hover:border-[rgb(var(--color-neutral)/0.2)]"
                 >

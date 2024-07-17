@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: '/preview-image.png',
   },
+  keywords: [“web development services”, “custom web development”, “responsive web design”, “ui design”, “web design company”, “web designer near me”, “ecommerce website development”, “frontend development services”, “web development for small businesses”, “professional web design”, “web design for startups”, “website redesign services”, “graphic design website”, “best ui design”, “mobile website design”, “user experience design”, “creative web solutions”, “website optimization services”, “digital design services”, “minimalist website design”],
 };
 
 const inter = Inter({

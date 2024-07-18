@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     images: '/preview-image.png',
   },
   keywords: [
+    "web development agency",
+    "web developer near me",
     "web development services", 
     "custom web development", 
     "responsive web design", 

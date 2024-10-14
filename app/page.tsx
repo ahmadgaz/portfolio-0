@@ -207,7 +207,7 @@ export default function Page() {
               </Link>
               <Link
                 target="_blank"
-                href="https://www.behance.net/gallery/196503029/Professor-Rating-Platform"
+                href="https://lenses.acmsjsu.org"
                 className="relative flex min-h-[600px] flex-1  flex-col gap-[8px] overflow-hidden rounded-lg p-[32px] shadow-sm animation default-border hover:border-[rgb(var(--color-border)/0.25)] hover:shadow-paper lg:max-w-[506px]"
               >
                 <Image
